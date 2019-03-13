@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>E D I T</title>
+  </head>
+  <body>
+    <form class="" action="/articles/<%= @article.id %>" method="post">
+      <input id="hidden" type="hidden" name="_method" value="PATCH">
+      <p>Title: <input type="text" name="title" placeholder="<%= @article[:title] %>"></p>
+      <p>Content: <textarea type="text" rows="10" cols="50" name="content" placeholder="<%= @article[:content] %>"></textarea></p>
+      <input type="submit" name="" value="WAFFLES R THE BEST">
+    </form>
+  </body>
+</html>
