@@ -1,0 +1,15 @@
+<!-- We need to create an ERB file in the views directory, new.erb, with a form that POSTs to a controller action, /articles. The controller action should u
+
+se the Create CRUD action to create the article and save it to the database. -->
+
+<h1>New Article</h1>
+
+<form method="POST" action="/articles">
+  <label for="title">Title:</label>
+  <input type="text" id="title" name="title"></input>
+
+  <label for="content">Content:</label>
+  <input type="text" id="content" name="content"></input>
+
+  <input type="submit" />
+</form>
