@@ -1,0 +1,14 @@
+<h1>Welcome to My app!!</h1>
+
+
+<form action="/articles/<%= @article.id %>" method="POST">
+  <input type="hidden" name="_method" value="patch">
+ <label for="title">Title:</label>
+ <input type="text" id="title" name="article[title]" value="<%= @article.title %>">
+ <br>
+ <label for="content">Content:</label>
+ <input type="text" id="content" name="article[content]" value="<%= @article.content %>">
+ <br>
+ <input type="submit" value="submit">
+
+</form>
