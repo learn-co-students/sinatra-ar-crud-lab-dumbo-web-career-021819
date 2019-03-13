@@ -11,12 +11,7 @@ time to tie them to controller actions in a Sinatra application. In this lab,
 you'll be building a basic magazine app, using every CRUD action.
 
 **Important:** In Sinatra, the order in which you define your routes in a
-controller matters. Routes are matched in the order they are defined. So, if we
-were to define the `get '/articles/:id'` route _before_ the `get '/articles/new'`
-route, Sinatra would feed all requests for `/articles/new` to the `/articles/:id`
-route and we should see an error telling us that your app is unable to find an
-`Article` instance with an `id` of `"new"`. The takeaway is that you should define
-your `/articles/new` route _before_ your `/articles/:id` route.
+controller matters. Routes are matched in the order they are defined. So, if we were to define the `get '/articles/:id'` route _before_ the `get '/articles/new'` route, Sinatra would feed all requests for `/articles/new` to the `/articles/:id` route and we should see an error telling us that your app is unable to find an `Article` instance with an `id` of `"new"`. The takeaway is that you should define your `/articles/new` route _before_ your `/articles/:id` route.
 
 ### Database
 
@@ -34,8 +29,7 @@ First, create a route in your controller, `get '/articles/new'`, that renders th
 `new.erb` view.
 
 We need to create an ERB file in the views directory, `new.erb`, with a form
-that `POST`s to a controller action, `/articles`. The controller action should use
-the Create CRUD action to create the article and save it to the database.
+that `POST`s to a controller action, `/articles`. The controller action should use the Create CRUD action to create the article and save it to the database.
 When the form on `new.erb` is submitted, the action, pointing to `/articles`,
 will trigger a render of an `index.erb` file automatically. Before we can
 fully test if our form is working, we need to create that `index.erb` file, as
